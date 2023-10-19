@@ -1,7 +1,9 @@
 function PageNotFound() {
   return (
     <>
-      <div>404 PageNotFound</div>
+      <div className="text-2xl text-black flex justify-center items-center bg-white">
+        404 PageNotFound
+      </div>
 
       <a href="/dashboard">Back to Dashboard</a>
     </>
