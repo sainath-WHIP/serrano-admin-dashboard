@@ -414,7 +414,7 @@ function Tr({
     <tr className="text-black text-base  border-b border-[#999999]  text-left text-[15px]">
       <td className="px-6 py-2 whitespace-nowrap ">{_id}</td>
       <td className="px-6 py-2 whitespace-nowrap ">
-        <Moment format="YYYY-MM-DD HH:mm:ss.SSS">{createdAt}</Moment>
+        <Moment format="YYYY-MM-DD HH:mm:ss">{createdAt}</Moment>
       </td>
       <td className="px-6 py-2 whitespace-nowrap">
         <a target="_blank" rel="noreferrer" href={images}>

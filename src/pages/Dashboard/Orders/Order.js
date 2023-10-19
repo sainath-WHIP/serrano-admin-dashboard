@@ -62,10 +62,16 @@ function Order() {
   const [sortByCreatedAtAsc, setSortByCreatedAtAsc] = useState(true);
   const [statusFilter, setStatusFilter] = useState("all");
   const [loading, setLoading] = useState(false);
+  // const reversedData = [...array].reverse();
 
   const dispatch = useDispatch();
   const searchRef = useRef();
   const pageSize = 6;
+
+  // console.log("reverse",reversedData)
+  // console.log("array",array)
+
+
 
   useEffect(() => {
     const getAllOrder = async () => {
@@ -337,7 +343,7 @@ function Order() {
                           {order._id}
                         </td>
                         <td className="px-6 py-2 whitespace-nowrap">
-                          <Moment format="YYYY-MM-DD HH:mm:ss.SSS">
+                          <Moment format="YYYY-MM-DD HH:mm:ss">
                             {order.createdAt}
                           </Moment>
                         </td>

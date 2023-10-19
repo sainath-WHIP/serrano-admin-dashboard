@@ -41,6 +41,7 @@ const Login = () => {
     }
   };
   const admin_token = localStorage.getItem("admin_token");
+  
   useEffect(() => {
     if (admin_token) {
       navigate("/dashboard");

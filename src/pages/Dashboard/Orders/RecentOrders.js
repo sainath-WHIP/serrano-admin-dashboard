@@ -272,7 +272,7 @@ function RecentOrders() {
                           {order._id}
                         </td>
                         <td className="px-6 py-2 whitespace-nowrap">
-                          <Moment format="YYYY-MM-DD HH:mm:ss ">
+                          <Moment format="YYYY-MM-DD HH:mm:ss">
                             {order.createdAt}
                           </Moment>
                         </td>
