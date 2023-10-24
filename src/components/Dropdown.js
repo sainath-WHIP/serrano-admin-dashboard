@@ -54,41 +54,46 @@ const Dropdown = ({ open, i }) => {
           )}
         </div>
       )}
-      <div className="cursor-pointer flex  gap-3.5 group p-1 items-center duration-700">
-        <PiGearLight
-          size={24}
-          color="white"
-          className={` duration-700  ${
-            !open && "opacity-0 translate-x-28 overflow-hidden  "
-          }`}
-        />
-        <p
-          className={`text-[#fff] text-sm  duration-700  ${
-            !open && "opacity-0 translate-x-28 overflow-hidden "
-          }`}
-        >
-          Settings
-        </p>
-      </div>
-      {expanded && (
-        <div className="absolute">
-          <div
-            className=" bg-white rounded-md px-16 py-1 flex justify-center mb-1 mt-2"
-            onClick={() => handleNavigation("/profile")}
-          >
-            <p className="cursor-pointer text-sm font-medium hover:text-lime-600 text-[#000] ">
-              Profile
+
+      {open && (
+        <>
+          <div className="cursor-pointer flex  gap-3.5 group p-1 items-center duration-700">
+            <PiGearLight
+              size={24}
+              color="white"
+              className={` duration-700  ${
+                !open && "opacity-0 translate-x-28 overflow-hidden  "
+              }`}
+            />
+            <p
+              className={`text-[#fff] text-sm  duration-700  ${
+                !open && "opacity-0 translate-x-28 overflow-hidden "
+              }`}
+            >
+              Settings
             </p>
           </div>
-          <div
-            className=" bg-white rounded-md  py-1 flex justify-center"
-            onClick={() => handleNavigation("/change-password")}
-          >
-            <p className="text-[#000] text-sm font-medium hover:text-red-600 cursor-pointer">
-              Change Password
-            </p>
-          </div>
-        </div>
+          {expanded && (
+            <div className="absolute">
+              <div
+                className=" bg-white rounded-md px-16 py-1 flex justify-center mb-1 mt-2"
+                onClick={() => handleNavigation("/profile")}
+              >
+                <p className="cursor-pointer text-sm font-medium hover:text-lime-600 text-[#000] ">
+                  Profile
+                </p>
+              </div>
+              <div
+                className=" bg-white rounded-md  py-1 flex justify-center"
+                onClick={() => handleNavigation("/change-password")}
+              >
+                <p className="text-[#000] text-sm font-medium hover:text-red-600 cursor-pointer">
+                  Change Password
+                </p>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
