@@ -5,7 +5,7 @@ import { AiOutlineShop } from "react-icons/ai";
 import Layout from "../../../components/Layout";
 import axios from "axios";
 import { RxCross2 } from "react-icons/rx";
-import Loadnig from "../../../components/Loadnig";
+import Loadnig from "../../../components/Loading";
 import { getAllUsersURL } from "../../../networking/APIEndpoints";
 import Moment from "react-moment";
 const Total_Income = () => {

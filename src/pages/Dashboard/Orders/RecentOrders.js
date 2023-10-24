@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Moment from "react-moment";
-import Loadnig from "../../../components/Loadnig";
+import Loadnig from "../../../components/Loading";
 import { setOrdersData } from "../../../redux/reducers/ordersSlice";
 import { getAllOrdersURL } from "../../../networking/APIEndpoints";
 

@@ -4,12 +4,12 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { RxAvatar, RxCross2 } from "react-icons/rx";
 import { FaUserEdit } from "react-icons/fa";
-import Loadnig from "../../../components/Loadnig";
 import {
   getAdminProfileURL,
   updateAdminAvatarURL,
   updateAdminInfoURL,
 } from "../../../networking/APIEndpoints";
+import Loading from "../../../components/Loading";
 
 function ProfilePage() {
   const [userInfo, setUserInfo] = useState({
@@ -65,7 +65,7 @@ function ProfilePage() {
     <>
       <Layout>
         {loading === true ? (
-          <Loadnig />
+          <Loading />
         ) : (
           <>
             <div className="">

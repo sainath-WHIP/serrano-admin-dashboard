@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSellerData } from "../../../redux/reducers/sellerSlice";
 import { toast } from "react-toastify";
-import Loadnig from "../../../components/Loadnig";
+import Loadnig from "../../../components/Loading";
 import { getAllSellersURL } from "../../../networking/APIEndpoints";
 import Moment from "react-moment";
 

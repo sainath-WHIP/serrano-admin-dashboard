@@ -1,4 +1,4 @@
-function Loadnig() {
+function Loading() {
   return (
     <>
       <div className="">
@@ -201,4 +201,4 @@ function Loadnig() {
   );
 }
 
-export default Loadnig;
+export default Loading;

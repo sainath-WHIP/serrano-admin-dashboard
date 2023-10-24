@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import Moment from "react-moment";
-import Loadnig from "../../../components/Loadnig";
+import Loadnig from "../../../components/Loading";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { setProductData } from "../../../redux/reducers/productSlice";
 import { getAllProductsURL } from "../../../networking/APIEndpoints";
