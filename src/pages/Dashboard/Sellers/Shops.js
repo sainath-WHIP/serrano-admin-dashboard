@@ -80,8 +80,8 @@ function Shops() {
           withCredentials: true,
         });
         console.log("all sellers data", data?.shops);
-        setArray(data?.shops);
-        const sellers = data?.shops;
+        const sellers = data?.shops.reverse();
+        setArray(sellers);
         console.log("sellers", sellers);
         dispatch(setSellerData(sellers));
         setLoading(false);

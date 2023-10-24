@@ -70,7 +70,9 @@ function Users() {
           withCredentials: true,
         });
         console.log("all users data", data?.users);
-        setArray(data?.users || []);
+        const orderData = data?.users.reverse();
+
+        setArray(orderData || []);
         setLoading(false);
       } catch (error) {
         console.log("error", error);

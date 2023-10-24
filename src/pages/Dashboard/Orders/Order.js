@@ -81,9 +81,9 @@ function Order() {
           withCredentials: true,
         });
         console.log("all orders data", data?.orders);
-        setArray(data?.orders);
+        const orderData = data?.orders.reverse();
+        setArray(orderData);
 
-        const orderData = data?.orders;
         console.log("orderData", orderData);
         dispatch(setOrdersData(orderData));
         setLoading(false);

@@ -69,7 +69,7 @@ const ChangePassword = () => {
               </label>
               <div className="mt-1 relative">
                 <input
-                  type={visible ? "text" : "password"}
+                  type={visibleold ? "text" : "password"}
                   name="oldpassword"
                   required
                   value={oldPassword}
