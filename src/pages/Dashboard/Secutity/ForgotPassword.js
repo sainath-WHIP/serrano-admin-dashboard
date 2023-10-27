@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Logo from "../../../assets/serrano.png";
 import { forgotPasswordURL } from "../../../networking/APIEndpoints";
+import { useNavigate } from "react-router-dom";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -20,6 +21,9 @@ function ForgotPassword() {
       if (response.status === 201) {
         toast(res?.message);
         console.log("res:", res?.message);
+        setTimeout(() => {
+          navigate("/");
+        }, 4000);
       } else {
         toast(res?.message);
       }

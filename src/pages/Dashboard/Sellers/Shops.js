@@ -465,7 +465,7 @@ function Tr({
       >
         {status}
       </td>
-      <td className="px-6 py-2 break-all whitespace-nowrap">{address}</td>
+      <td className="px-6 py-2  whitespace-nowrap">{address}</td>
       <td className=" flex flex-row mt-2 px-6 py-2 whitespace-nowrap gap-6">
         <div className="">
           <div onClick={formVisiblehandler}>
