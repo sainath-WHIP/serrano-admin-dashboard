@@ -14,6 +14,7 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState();
   const [avatar, setAvatar] = useState();
   const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ const Register = () => {
     const imageFile = e.target.querySelector('input[type="file"]').files[0];
     formData.append("avatar", imageFile);
     try {
+      setLoading(true);
       const response = await fetch(adminRegisterURL, {
         method: "POST",
         body: formData,
@@ -32,6 +34,9 @@ const Register = () => {
       const data = await response.json();
       toast(data?.message);
       console.log("data", data);
+
+      setLoading(false);
+
       setTimeout(() => {
         navigate("/");
       }, 3000);
@@ -202,7 +207,7 @@ const Register = () => {
                 type="submit"
                 className=" w-[40%] h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:shadow-md"
               >
-                Register
+                {loading ? "Loading..." : "Register"}
               </button>
             </div>
           </form>

@@ -9,10 +9,12 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const response = await fetch(adminLoginURL, {
         method: "POST",
         credentials: "include",
@@ -31,6 +33,7 @@ const Login = () => {
       if (response.status === 201) {
         const admin_token = res?.token;
         localStorage.setItem("admin_token", admin_token);
+        setLoading(false);
         navigate("/dashboard");
         toast(res?.message);
       } else {
@@ -41,7 +44,7 @@ const Login = () => {
     }
   };
   const admin_token = localStorage.getItem("admin_token");
-  
+
   useEffect(() => {
     if (admin_token) {
       navigate("/dashboard");
@@ -141,7 +144,7 @@ const Login = () => {
                 type="submit"
                 className=" w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:shadow-md"
               >
-                Login
+                {loading ? "Loading..." : "Login"}
               </button>
             </div>
             <div className={`flex items-center w-full`}>
